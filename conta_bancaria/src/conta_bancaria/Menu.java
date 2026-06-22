@@ -1,5 +1,6 @@
 package conta_bancaria;
 
+import conta_bancaria.model.Conta;
 import conta_bancaria.util.Cores;
 import java.util.Scanner;
 
@@ -10,6 +11,22 @@ public class Menu {
 	public static void main(String[] args) {
 		
 		int opcao = 0;
+		
+		Conta conta1 = new Conta(1, 123, 1, "Giovanna", 100.45f);
+		Conta conta2 = new Conta(2, 123, 2, "Pedro", 25.00f);
+		
+		conta1.visualizar();
+		conta2.visualizar();
+		
+		conta1.setSaldo(10000000.0f);
+		
+		conta1.visualizar();
+		
+		System.out.println("Sacar R$ 1.000,00 da conta 2: "+ (conta2.sacar(1000.00f) ? "Saque efetuado com sucesso." : "Saldo insuficiente."));
+		
+		conta2.depositar(50000.00f);
+		
+		conta2.visualizar();
 		
 		while(true) {
 			System.out.println(Cores.ANSI_WHITE_BACKGROUND_BRIGHT  + Cores.TEXT_BLUE_BOLD+ "˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜");
