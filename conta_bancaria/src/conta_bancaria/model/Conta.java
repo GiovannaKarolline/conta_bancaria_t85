@@ -1,6 +1,6 @@
 package conta_bancaria.model;
 
-public class Conta {
+public abstract class Conta {
 	private int numero;
 	private int agencia;
 	private int tipo;
@@ -13,9 +13,6 @@ public class Conta {
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
-	}
-	
-	public Conta() {
 	}
 
 	public int getNumero() {
@@ -94,7 +91,6 @@ public class Conta {
 		System.out.printf("Tipo da conta: %s\n", tipo);
 		System.out.printf("Nome do titular: %s\n", this.titular);
 		System.out.printf("Saldo: %.2f\n", this.saldo);
-		System.out.println("˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜");
 	}
 	
 }
