@@ -187,6 +187,7 @@ public class Menu {
 
 	public static void keyPress() {
 		System.out.println(Cores.TEXT_RESET + "\n\nPressione Enter para continuar...");
+		leia.skip("\\R");
 		leia.nextLine();
 	}
 }
